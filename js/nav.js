@@ -20,26 +20,26 @@ items.forEach((item) => {
 // Відображення сторінок
 // Функція для приховування всіх сторінок
 function hideAllPages() {
-  pages.forEach(page => {
+  pages.forEach((page) => {
     page.classList.add('hidden');
   });
 }
 
 // Додаємо обробник подій для кожного елемента списку
-items.forEach(item => {
+items.forEach((item) => {
   item.addEventListener('click', (event) => {
     // Перевіряємо, чи посилання не веде на зовнішній сайт
     const link = item.querySelector('a');
     if (link && link.getAttribute('href').startsWith('#')) {
       // Забираємо стандартну поведінку посилань
       event.preventDefault();
-      
+
       // Отримуємо хеш з посилання (наприклад, #contact)
       const targetId = link.getAttribute('href').substring(1);
-      
+
       // Приховуємо всі сторінки
       hideAllPages();
-      
+
       // Відображаємо відповідну сторінку за її ID
       const targetPage = document.getElementById(targetId);
       if (targetPage) {
@@ -47,4 +47,15 @@ items.forEach(item => {
       }
     }
   });
+});
+
+
+// перехід за посиланням на сторінку "work"
+const link = document.querySelector('.expand-icon');
+const work = document.getElementById('work');
+const about = document.getElementById('about');
+
+link.addEventListener('click', () => {
+  about.classList.add('hidden');
+  work.classList.remove('hidden');
 });
