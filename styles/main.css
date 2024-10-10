@@ -802,6 +802,7 @@ a.image-link:hover {
 
 .footer.loaded {
   opacity: 1;
+  display: flex;
 }
 
 @media (min-width: 970px) {
@@ -1659,6 +1660,7 @@ a.image-link:hover {
   font-size: 32px;
   cursor: pointer;
   margin-top: -2vh;
+  display: flex;
 }
 
 @media (min-width: 970px) {
@@ -2498,6 +2500,11 @@ a.image-link:hover {
   padding: 0 20px 20px 20px;
 }
 
+.news__container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .page.news .hero {
   height: 100vh !important;
   width: 100vw !important;
@@ -2977,6 +2984,13 @@ a.image-link:hover {
     max-width: unset;
   }
 }
+
+.people__list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
 
 .people__list__item__description {
   position: absolute;

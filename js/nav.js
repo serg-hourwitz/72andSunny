@@ -3,11 +3,13 @@ const navMenuExpanded = document.querySelector('.nav__menu__expanded');
 const items = document.querySelectorAll('.list__item');
 const pages = document.querySelectorAll('.page');
 
+// поява меню та зміна кнопки меню
 navMenuButton.addEventListener('click', () => {
   navMenuExpanded.classList.toggle('active');
   navMenuButton.classList.toggle('close');
 });
 
+// приховування меню по кліку на елемент меню
 items.forEach((item) => {
   item.addEventListener('click', () => {
     navMenuExpanded.classList.remove('active');
@@ -15,6 +17,7 @@ items.forEach((item) => {
   });
 });
 
+// Відображення сторінок
 // Функція для приховування всіх сторінок
 function hideAllPages() {
   pages.forEach(page => {
