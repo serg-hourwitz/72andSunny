@@ -36,6 +36,10 @@ h2 {
   transition: 0.25s transform;
 }
 
+.hidden {
+  display: none;
+}
+
 .home .section__copy,
 .home .top,
 .page .section__copy,
