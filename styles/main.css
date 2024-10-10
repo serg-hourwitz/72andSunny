@@ -1650,7 +1650,7 @@ a.image-link:hover {
 
 .page.about .expanded .parallax__copy {
   position: relative;
-  z-index: 4;
+  /* z-index: 4; */
 }
 
 @media (min-width: 970px) {
