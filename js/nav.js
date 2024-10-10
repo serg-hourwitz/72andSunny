@@ -1,13 +1,14 @@
 const navMenuButton = document.querySelector('.nav__menu__button');
 const navMenuExpanded = document.querySelector('.nav__menu__expanded');
-const pages = document.querySelectorAll('.page');
-
+const items = document.querySelectorAll('.list__item');
 
 navMenuButton.addEventListener('click', () => {
   navMenuExpanded.classList.toggle('active');
   navMenuButton.classList.toggle('close');
 });
 
-pages.addEventListener('click', () => {
-  navMenuExpanded.classList.remove('active');
-})
+items.forEach((item) => {
+  item.addEventListener('click', () => {
+    navMenuExpanded.classList.remove('active');
+  });
+});
